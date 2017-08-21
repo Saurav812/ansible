@@ -1,0 +1,41 @@
+- name: add flink group
+  group:
+    name: flink
+    gid: 499
+    system: yes
+    state: present
+
+- name: add flink user
+  user:
+    name: flink
+    uid: 499
+    system: yes
+    state: present
+    createhome: yes
+    group: flink
+    home: /opt/flink
+    shell: /bin/bash
+
+- name: create ssh dir
+  file:
+    path: /opt/flink/.ssh
+    state: directory
+    owner: flink
+    group: flink
+    mode: 0700
+
+- name: distribute flink private ssh key
+  copy:
+    content: "{{ flink_ssh_private_key }}"
+    dest: /opt/flink/.ssh/id_rsa
+    owner: flink
+    group: flink
+    mode: 0600
+
+- name: distribute flink authorized_key
+  copy:
+    content: "{{ flink_ssh_public_key }}"
+    dest: /opt/flink/.ssh/authorized_keys
+    owner: flink
+    group: flink
+    mode: 0600
