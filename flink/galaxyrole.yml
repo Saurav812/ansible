@@ -1,0 +1,139 @@
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-vsg-sudoers"
+  version: 624cd726896d5a0875531853e02fbac54328525d
+  name: vsg.ansible-vsg-sudoers
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-pam-radius"
+  version: d58423e7e279b2cb1f3a6f17a9969903a88793e8
+  name: vsg.ansible-pam-radius
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-sshd"
+  version: 0f856a36f33857440fc14fdd9d8a0f2e402bcf05
+  name: vsg.ansible-sshd
+
+- src: "andrewrothstein.unarchive-deps"
+  version: v1.0.8
+
+- src: "andrewrothstein.alpine-glibc-shim"
+  version: v2.0.4
+
+- src: "andrewrothstein.java-oracle"
+  version: v1.0.1
+
+- src: "andrewrothstein.java-oracle-jre"
+  version: v2.0.0
+
+- src: "andrewrothstein.kafka"
+  version: v3.0.2
+
+- src: "andrewrothstein.hadoop"
+  version: v2.0.1
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-create-var-ssd"
+  version: v1.0
+  name: vsg.ansible-create-var-ssd
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-hadoop"
+  version: bd4d97b63e843f25cecf96577f82dcfbfcba5bc9
+  name: vsg.ansible-hadoop
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-hadoop-config"
+  version: 789ceaec51568b6c329ab2b00fa01a335dfe97c7
+  name: vsg.ansible-hadoop-config
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-hadoop-user"
+  version: 684d79448b2cf0d17dc2daa2079f6b90e5788307
+  name: vsg.ansible-hadoop-user
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-kafka"
+  version: b374c2bf2f75baddda72bb1a4be2caa718e12fe6
+  name: vsg.ansible-kafka
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-kafka-config"
+  version: 5a96ffb49f82c3bc24325095a3df7c3ad1e2f403
+  name: vsg.ansible-kafka-config
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-kafka-user"
+  version: f0f2d33b29148eff39dd32fd1c6be949a5027fdb
+  name: vsg.ansible-kafka-user
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-zookeeper"
+  version: e03c463e09f81769cf8b2719b726ef238eebbae2
+  name: vsg.ansible-zookeeper
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-zookeeper-config"
+  version: b70283b452bdf54f036f704744098eb6d3a9441d
+  name: vsg.ansible-zookeeper-config
+
+- src: "couchbaselabs.couchbase-server"
+  version: v1.7.6
+
+- src: "andrewrothstein.flink"
+  version: v1.0.2
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-flink"
+  name: "vsg.ansible-flink"
+
+- src: "wtanaka.haproxy"
+  version: bc3d8bfc67f3abc0dfb22d3a4205e597bc580d44
+
+- src: "andrewrothstein.etcd-cluster"
+  version: v1.1.0
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-vmc"
+  name: vsg.ansible-vmc
+
+# Original source : https://github.com/oravirt/ansible-cockroach-cluster modified for Comcast purpose
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-cockroach-cluster"
+  name: vsg.ansible-cockroach-cluster
+  version: v1.0.1
+
+# Original source : https://github.com/oravirt/ansible-cockroach-upgrade modified for Comcast purpose
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-cockroach-upgrade"
+  name: vsg.ansible-cockroach-upgrade
+  version: v1.0.1
+
+# Original source : https://github.com/oravirt/ansible-cockroach-install modified for Comcast purpose
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-cockroach-install"
+  name: vsg.ansible-cockroach-install
+  version: v1.0.3
+
+# Original source : https://github.com/oravirt/ansible-cockroachdb modified for Comcast purpose
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-cockroach-db"
+  name: vsg.ansible-cockroach-db
+  version: v1.0.2
+
+# Original source : https://github.com/oravirt/ansible-cockroachdb modified for Comcast purpose
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-cockroach-certs"
+  name: vsg.ansible-cockroach-certs
+  version: v1.0.0
+
+# Original source : https://github.com/oravirt/ansible-cockroachdb modified for Comcast purpose
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-cockroach-systemd"
+  name: vsg.ansible-cockroach-systemd
+  version: v1.0.0
+
+- src: "git+ssh://git@github.comcast.com/SPACE/ansible-role-kafka-manager"
+  name: space.ansible-role-kafka-manager
+  version: v1.2
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-clouduser"
+  name: vsg.ansible-clouduser
+  version: v0.9.5
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-vsg-users"
+  name: vsg.ansible-users
+  version: v1.0.0
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-splunk-forwarder"
+  name: vsg.ansible-splunk-forwarder
+  version: v0.9.0
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-package-repo"
+  name: vsg.ansible-package-repo
+  version: v0.9.0
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-iptables"
+  name: vsg.ansible-iptables
+
+- src: "git+ssh://git@github.comcast.com/VSG/ansible-vmcgw"
+  name: vsg.ansible-vmcgw
