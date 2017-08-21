@@ -1,0 +1,3 @@
+{% for host in groups['vsgflks'] %}
+{{ hostvars[host]['ansible_fqdn'] }}
+{% endfor %}

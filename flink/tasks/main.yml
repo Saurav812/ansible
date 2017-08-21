@@ -1,0 +1,10 @@
+---
+- include: flink_create_user.yml
+- name: Run community role
+  include_role:
+    name: andrewrothstein.flink
+- include: flink_config.yml
+  tags:
+    - config
+  vars:
+    flink_link: /usr/local/flink
