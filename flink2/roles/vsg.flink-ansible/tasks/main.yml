@@ -1,0 +1,6 @@
+---
+- include: flink_config.yml
+  tags:
+    - config
+  vars:
+    flink_link: /usr/local/flink

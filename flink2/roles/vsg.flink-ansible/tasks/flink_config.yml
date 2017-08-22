@@ -1,0 +1,51 @@
+- name: Flink yaml config
+  template:
+    src: flink-conf.yaml.j2
+    dest: "{{ flink_link }}/conf/flink-conf.yaml"
+    owner: root
+    group: root
+    mode: 0644
+  register: flinkconf
+
+- name: Flink master config
+  template:
+    src: master.j2
+    dest: "{{ flink_link }}/conf/master"
+    owner: root
+    group: root
+    mode: 0644
+  
+- name: Flink slaves config
+  template:
+    src: slaves.j2
+    dest: "{{ flink_link }}/conf/slaves"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Add IP address of all hosts to /etc/hosts
+  lineinfile:
+    dest: /etc/hosts
+    regexp: "{{ hostvars[item].inventory_hostname_short }}"
+    line: "{{ hostvars[item].ansible_default_ipv4.address }} {{ hostvars[item].inventory_hostname }} {{ hostvars[item].inventory_hostname_short }}"
+    state: present
+  with_items: "{{ groups.vsgflk }}"
+
+- name: Update ssh config
+  lineinfile:
+    dest: /etc/ssh/ssh_config
+    regexp: 'StrictHostKeyChecking'
+    line: '  StrictHostKeyChecking no'
+
+- name: create flink log dir
+  file:
+    path: /var/log/flink
+    state: directory
+    owner: flink
+    group: flink
+    mode: 0775
+
+- name: Start cluster
+  become_user: flink
+  command: "nohup {{ flink_link }}/bin/start-cluster.sh"
+  when: flinkconf.changed and inventory_hostname in groups['vsgflkm']
